@@ -1,11 +1,10 @@
 import React, { useState } from "react";
 
 function PlantCard({ plant }) {
-  // Task 3: Mark as sold out (non-persisting, local state only)
   const [inStock, setInStock] = useState(true);
 
   return (
-    <li className="card">
+    <li className="card" data-testid="plant-item">
       <img src={plant.image} alt={plant.name} />
       <h4>{plant.name}</h4>
       <p>Price: {plant.price}</p>
